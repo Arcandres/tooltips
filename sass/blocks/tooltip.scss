@@ -1,0 +1,52 @@
+$t-c: #000; // Tooltip color
+$ta-s: 10px; // Arrow size
+$t-t: .5s; // Transition duration
+
+// Tooltip container
+.t-c {
+  position: relative;
+
+
+  // Tooltip layer
+  .t {
+
+    // Center
+    left: 0;
+    right: 0;
+
+    position: absolute;
+    opacity: 0;
+    // Animation
+    transition: $t-t all;
+    top:50px; // Distance animation
+    z-index: 100;
+
+    // Tooltip content
+    span {
+
+      background: $t-c;
+      display: inline-block;
+      border-radius: 20px;
+      padding: .5rem .8rem;
+      text-align: center;
+
+      // Tooltip arrow
+      &::before {
+        content: "";
+        border-bottom: $ta-s solid $t-c;
+        border-left: $ta-s solid transparent;
+        border-right: $ta-s solid transparent;
+        float: left;
+        margin-top: -18px;
+        margin-left: calc(50% - #{$ta-s});
+      }
+    }
+
+  }
+
+  // Tooltip animation
+  & img:hover ~ .t {
+    opacity: 1;
+    top: 10px;
+  }
+}

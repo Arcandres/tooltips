@@ -4,20 +4,9 @@
   text-align: center;
 
   img {
-    cursor: pointer;
     margin: .5rem;
-    opacity: .5;
     padding: 1rem;
-    transition: .1s all;
+    opacity: .5;
     width: 20%;
-
-    &:hover {
-      opacity: .7;
-    }
-
-    &:active {
-      transform: scale(.9);
-      opacity: 1;
-    }
   }
 }
