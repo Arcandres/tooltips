@@ -10,9 +10,16 @@
 <body>
   <header class="header">
     <div class="l-container">
-      <h1>Custom tooltips on images</h1>
+      <h1>Custom Tooltips on Images</h1>
+      <p>Use custom tooltips on images without adding more elements</p>
     </div>
   </header>
-  <div class="l-container container" id="container"><img src="img/fb.png" alt="Follow me on Facebook"/><img src="img/tw.png" alt="Follow me on Twitter"/><img src="img/yt.png" alt="Follow me on Youtube"/></div>
+  <main class="l-container">
+    <section>
+      <p>I'm using <code>alt</code> attribute to show info in the tooltip. You can use whatever attribute you want.</p>
+      <div class="container" id="container"><img src="img/fb.png" alt="Follow me on Facebook"/><img src="img/tw.png" alt="Follow me on Twitter"/><img src="img/yt.png" alt="Follow me on Youtube"/></div>
+    </section>
+    <section class="doc"></section>
+  </main>
   <script src="js/j.js"></script>
 </body>

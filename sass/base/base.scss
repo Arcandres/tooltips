@@ -1,14 +1,18 @@
 body {
-  color: #ddd;
+  color: #5E6E75;
   background: #111;
   font-family: Ubuntu;
+  font-size: 15px;
+  text-align: center;
 }
 
 h1 {
   font-size: 1.8em;
   font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
 }
 
 .l-container {
@@ -16,8 +20,4 @@ h1 {
   margin-right: auto;
   max-width: 960px;
   padding: 1rem;
-}
-
-img {
-  max-width: 100%;
 }

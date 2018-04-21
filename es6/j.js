@@ -1,7 +1,7 @@
-const tooltip = (element) => {
+const tooltip = (e,a) => {
 
   // Images container
-  const container = document.getElementById(element),
+  const container = document.getElementById(e),
         // Images
         images = [...container.getElementsByTagName('img')]; // Transform to Obj
 
@@ -10,10 +10,10 @@ const tooltip = (element) => {
     images[img].outerHTML = `<span class='t-c'>
                             ${images[img].outerHTML}
                             <i class='t'>
-                              <span>${images[img].getAttribute('alt')}</span>
+                              <span>${images[img].getAttribute(a)}</span>
                             </i>
                             </span>`;
   }
 };
 
-tooltip('container');
+tooltip('container','alt');

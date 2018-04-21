@@ -13,13 +13,22 @@ body
 
   header.header
     .l-container
-      h1 Custom tooltips on images
-  
-  //- Images container
-  #container.l-container.container
-    img(src="img/fb.png", alt="Follow me on Facebook")
-    img(src="img/tw.png", alt="Follow me on Twitter")
-    img(src="img/yt.png", alt="Follow me on Youtube")
-  
+      h1 Custom Tooltips on Images
+      p Use custom tooltips on images without adding more elements
+      
+  main.l-container
+    section
+      p I'm using <code>alt</code> attribute to show info in the tooltip. You can use whatever attribute you want.
+      //- Images container
+      #container.container
+        img(src="img/fb.png", alt="Follow me on Facebook")
+        img(src="img/tw.png", alt="Follow me on Twitter")
+        img(src="img/yt.png", alt="Follow me on Youtube")
+      
+    //- Documentation
+    section.doc
+      
+    
+    
   //- Javascript
   script(src='js/j.js')
