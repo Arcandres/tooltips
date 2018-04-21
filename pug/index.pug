@@ -27,8 +27,43 @@ body
       
     //- Documentation
     section.doc
-      
-    
-    
+      h2 How to use
+      p Copy this line before <b>&lt;/head&gt;</b>: 
+      p <code>&lt;link rel="stylesheet" href="URL"&gt;</code>
+      p Copy this line before <b>&lt;/body&gt;</b>: 
+      p <code>&lt;script src='URL'&gt;</code>
+      p Now, just call the function with two parameters: <code>element, attribute</code>
+      pre(data-language='Js')
+        code.hljs.javascript.
+          tooltip(<span class="hljs-string">'container'</span>,<span class="hljs-string">'alt'</span>);
+          </code></pre>
+      p <b>Element</b> means the images container (use ID), and <b>Attribute</b>, the content to show in the <b>Tooltip</b>
+      h2 Centering images
+      #container2.container
+        style.
+          #container2 .t-c {
+            display: block;
+            position: relative;
+            text-align: center;
+          }
+          #container2 .t-c img {
+            width:50%;
+          }
+        img(src="img/glasses.png", alt="Glasses")
+        img(src="img/camera.png", alt="This is a camera")
+      p If you like to center images as I do, edit <code>tooltip.scss</code> and change this:
+      pre(data-language='CSS')
+        code.hljs.css.
+          <span class="hljs-selector-class">.t-c</span> {
+            <span class="hljs-attribute">display</span>: inline-block;
+            <span class="hljs-attribute">position</span>: relative;
+      p by this:
+      pre(data-language='CSS')
+        code.hljs.css.
+          <span class="hljs-selector-class">.t-c</span> {
+            <span class="hljs-attribute">display</span>: block;
+            <span class="hljs-attribute">position</span>: relative;
+            <span class="hljs-attribute">text-align</span>: center;
+
   //- Javascript
   script(src='js/j.js')

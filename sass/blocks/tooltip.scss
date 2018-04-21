@@ -1,10 +1,12 @@
-$t-c: #000; // Tooltip color
+$t-c: #3697DB; // Tooltip color
+$t-tc: #ddd;// Text color
 $ta-s: 10px; // Arrow size
 $t-t: .3s; // Transition duration
 $t-z: 100; // Z-index value
 
 // Tooltip container
 .t-c {
+  display: inline-block;
   position: relative;
 
 
@@ -12,6 +14,8 @@ $t-z: 100; // Z-index value
   .t {
 
     // Center
+    display: flex;
+    justify-content: center;
     left: 0;
     right: 0;
 
@@ -20,7 +24,9 @@ $t-z: 100; // Z-index value
     // Animation
     opacity: 0;
     transition: $t-t all;
-    top:50px; // Distance animation
+    bottom: -50px; // Distance animation
+    visibility: hidden;
+
 
     z-index: 0;
 
@@ -28,9 +34,11 @@ $t-z: 100; // Z-index value
     span {
 
       background: $t-c;
+      border-radius: 15px;
+      color: $t-tc;
       display: inline-block;
-      border-radius: 20px;
-      padding: .5rem .8rem;
+      padding: .5rem;
+      position: absolute;
       text-align: center;
 
       // Tooltip arrow by https://codepen.io/cristina-silva/
@@ -50,7 +58,8 @@ $t-z: 100; // Z-index value
   // Tooltip animation
   & img:hover ~ .t {
     opacity: 1;
-    top: 30px;
+    bottom: -10px;
+    visibility: visible;
     z-index: $t-z;
   }
 }

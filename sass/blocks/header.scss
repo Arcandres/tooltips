@@ -2,12 +2,19 @@
   background: #0b0b0b;
   border-bottom: 1px solid #222;
   padding: 1rem;
+  text-align: center;
 
-  h1:before {
+}
+
+h1, h2, h3 {
+  color: #ddd;
+  font-weight: 400;
+
+  &:before {
     content: '< ';
   }
 
-  h1:after {
+  &:after {
     content: ' >';
   }
 }

@@ -17,3 +17,4 @@ const tooltip = (e,a) => {
 };
 
 tooltip('container','alt');
+tooltip('container2', 'alt');

@@ -19,7 +19,40 @@
       <p>I'm using <code>alt</code> attribute to show info in the tooltip. You can use whatever attribute you want.</p>
       <div class="container" id="container"><img src="img/fb.png" alt="Follow me on Facebook"/><img src="img/tw.png" alt="Follow me on Twitter"/><img src="img/yt.png" alt="Follow me on Youtube"/></div>
     </section>
-    <section class="doc"></section>
+    <section class="doc">
+      <h2>How to use</h2>
+      <p>Copy this line before <b>&lt;/head&gt;</b>: </p>
+      <p><code>&lt;link rel="stylesheet" href="URL"&gt;</code></p>
+      <p>Copy this line before <b>&lt;/body&gt;</b>: </p>
+      <p><code>&lt;script src='URL'&gt;</code></p>
+      <p>Now, just call the function with two parameters: <code>element, attribute</code></p>
+      <pre data-language="Js"><code class="hljs javascript">tooltip(<span class="hljs-string">'container'</span>,<span class="hljs-string">'alt'</span>);
+</code></pre></code></pre>
+      <p><b>Element</b> means the images container (use ID), and <b>Attribute</b>, the content to show in the <b>Tooltip</b></p>
+      <h2>Centering images</h2>
+      <div class="container" id="container2">
+        <style>
+          #container2 .t-c {
+            display: block;
+            position: relative;
+            text-align: center;
+          }
+          #container2 .t-c img {
+            width:50%;
+          }
+        </style><img src="img/glasses.png" alt="Glasses"/><img src="img/camera.png" alt="This is a camera"/>
+      </div>
+      <p>If you like to center images as I do, edit <code>tooltip.scss</code> and change this:</p>
+      <pre data-language="CSS"><code class="hljs css"><span class="hljs-selector-class">.t-c</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">position</span>: relative;</code></pre>
+      <p>by this:</p>
+      <pre data-language="CSS"><code class="hljs css"><span class="hljs-selector-class">.t-c</span> {
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">position</span>: relative;
+  <span class="hljs-attribute">text-align</span>: center;
+</code></pre>
+    </section>
   </main>
   <script src="js/j.js"></script>
 </body>

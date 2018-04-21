@@ -3,7 +3,6 @@ body {
   background: #111;
   font-family: Ubuntu;
   font-size: 15px;
-  text-align: center;
 }
 
 h1 {
@@ -13,6 +12,31 @@ h1 {
 
 img {
   max-width: 100%;
+}
+
+pre {
+  border-radius: 10px;
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+pre[data-language]:before {
+  background: #0b0b0b;
+  border-bottom: 1px dashed #222;
+  content: attr(data-language);
+  display: block;
+  font-weight: 600;
+  padding: .2rem 0;
+  text-align: center;
+}
+
+// tag code inside p
+p code {
+  background: #181818;
+  border: 1px solid #202020;
+  border-radius: 10px;
+  padding: .3rem .5rem;
+  font-size: 12px;
 }
 
 .l-container {
