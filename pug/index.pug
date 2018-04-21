@@ -10,10 +10,17 @@ head
   link(rel="stylesheet", href="css/main.css")
   
 body
+
+  header.header
+    .l-container
+      h1 Custom tooltips on images
   
   //- Images container
-  #container
-    img(src="img/fb.png", alt="Follow me on Facebook")
+  #container.l-container.container
+    span.c-t
+      img(src="img/fb.png", alt="Follow me on Facebook")
+      //- Tooltip preview
+      i.t Follow me on Facebook
     img(src="img/tw.png", alt="Follow me on Twitter")
     img(src="img/yt.png", alt="Follow me on Youtube")
   

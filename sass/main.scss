@@ -1,2 +1,13 @@
 // Normalize
 @import "base/normalize";
+
+// Base styles
+@import "base/base";
+
+// Header
+@import "blocks/header";
+
+// Images container
+@import "blocks/content";
+// Tooltip
+@import "blocks/tooltip";
