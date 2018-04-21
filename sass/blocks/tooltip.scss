@@ -15,10 +15,12 @@ $t-t: .5s; // Transition duration
     right: 0;
 
     position: absolute;
-    opacity: 0;
+
     // Animation
+    opacity: 0;
     transition: $t-t all;
     top:50px; // Distance animation
+
     z-index: 100;
 
     // Tooltip content
@@ -30,7 +32,7 @@ $t-t: .5s; // Transition duration
       padding: .5rem .8rem;
       text-align: center;
 
-      // Tooltip arrow
+      // Tooltip arrow by https://codepen.io/cristina-silva/
       &::before {
         content: "";
         border-bottom: $ta-s solid $t-c;
