@@ -15,6 +15,3 @@ const tooltip = (e,a) => {
                             </span>`;
   }
 };
-
-tooltip('container','alt');
-tooltip('container2', 'alt');
